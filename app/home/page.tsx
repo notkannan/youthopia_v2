@@ -6,6 +6,7 @@ import CTA from '../components/CTA'
 import Faqs from '../components/FAQ'
 import Testimonial from '../components/Testimonial'
 import Blog from '../components/Blog'
+import Header from '../components/Header'
 
 const Page: FC = ({}) => {
   return (

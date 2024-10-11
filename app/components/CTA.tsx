@@ -43,12 +43,12 @@ const CTA = () => {
           </div>
 
           <h2 className={headingStyles}>
-            Join <span className="border-b-8 border-yellow-300">5,482</span>{" "}
-            other developers
+            Ready to <span className="border-b-8 border-yellow-300">make</span>{" "}
+             a difference?
           </h2>
           <p className={descriptionStyles}>
-            Experience our community and stay updated with the latest trends and
-            discussions. Join now to connect with like-minded professionals.
+            Experience our community and stay updated with the latest activities and
+            discussions. Join now to connect with like-minded youths.
           </p>
 
           <a href="#" className={buttonStyles} role="button">
@@ -66,7 +66,7 @@ const CTA = () => {
                 d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
               />
             </svg>
-            Get instant access
+            Take me there
           </a>
         </div>
       </div>

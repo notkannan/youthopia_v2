@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import { FaBars, FaTimes, FaShieldAlt } from "react-icons/fa";
+import Image from "next/image";
+import logo from '@/public/logo.png';
 
 // Define common styles as a JavaScript object
 const commonStyles = {
@@ -24,18 +26,14 @@ const Hero: React.FC = () => {
           <div className="flex items-center justify-between">
             <div className="shrink-0">
               <a href="#" title="AuraUI" className={commonStyles.link}>
-                <img
-                  className="w-auto h-8"
-                  src="https://www.auraui.com/logo-light.png"
-                  alt="AuraUI Logo"
-                />
+                <Image src={logo} alt="Youthopia Logo" width={150}/>
               </a>
             </div>
 
             <div className="hidden lg:flex lg:items-center lg:space-x-4 lg:ml-12">
               {["Activities", "News", "Donate", "Forums"].map((item) => (
                 <a
-                  href="#"
+                  href={item.toLowerCase()}
                   key={item}
                   title={item}
                   className={commonStyles.navLink}
@@ -52,7 +50,7 @@ const Hero: React.FC = () => {
                 className={commonStyles.buttonSecondary}
                 role="button"
               >
-                Start free trial
+                Get Started
               </a>
             </div>
 
@@ -107,7 +105,7 @@ const Hero: React.FC = () => {
                   {" "}
                   Start Your Journey{" "}
                 </span>
-                <h1 className="mt-6 text-4xl font-semibold tracking-tight text-gray-900 sm:text-4xl xl:text-6xl sm:tracking-tight">
+                <h1 className="mt-6 mb-6 text-4xl font-semibold tracking-tight text-gray-900 sm:text-4xl xl:text-6xl sm:tracking-tight">
                     Empower the Next Generation of Changemakers.
                 </h1>
               </div>
@@ -123,7 +121,7 @@ const Hero: React.FC = () => {
                     className={commonStyles.buttonPrimary}
                     role="button"
                   >
-                    Book A Discovery Call
+                    Join the Conversation
                   </a>
                 </div>
               </div>

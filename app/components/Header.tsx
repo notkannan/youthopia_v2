@@ -5,6 +5,7 @@ import Link from "next/link";
 import { FiMenu, FiShoppingCart, FiX } from "react-icons/fi";
 import logo from '@/public/logo.png';
 import Image from "next/image";
+import { SignedIn, UserButton } from "@clerk/nextjs";
 
 const styles = {
   link: "text-base font-medium text-black",
@@ -63,12 +64,9 @@ const Header = () => {
               )}
             </button>
             <div className="hidden xl:flex xl:items-center xl:space-x-10">
-              <Link href="#" className={styles.link} title="Sign up">
-                Sign up
-              </Link>
-              <Link href="#" className={styles.link} title="Sign in">
-                Sign in
-              </Link>
+              <SignedIn>
+                <UserButton />
+              </SignedIn>
             </div>
           </nav>
         </div>

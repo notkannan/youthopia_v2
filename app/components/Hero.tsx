@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import { FaBars, FaTimes, FaShieldAlt } from "react-icons/fa";
 import Image from "next/image";
 import logo from '@/public/logo.png';
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+
 
 // Define common styles as a JavaScript object
 const commonStyles = {
@@ -44,14 +46,12 @@ const Hero: React.FC = () => {
             </div>
 
             <div className="hidden sm:flex sm:items-center sm:justify-end sm:space-x-4 sm:ml-auto">
-              <a
-                href="#"
-                title="Start free trial"
-                className={commonStyles.buttonSecondary}
-                role="button"
-              >
-                Get Started
-              </a>
+              <SignedOut>
+                <SignInButton />
+              </SignedOut>
+              <SignedIn>
+                <UserButton />
+              </SignedIn>
             </div>
 
             <div className="flex ml-4 lg:hidden">

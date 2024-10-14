@@ -1,5 +1,4 @@
 import React from "react";
-import { FaUser } from "react-icons/fa";
 
 const CTA = () => {
   const containerStyles = "py-10 bg-white sm:py-16 lg:py-24";

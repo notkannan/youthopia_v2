@@ -49,9 +49,6 @@ const Hero: React.FC = () => {
               <SignedOut>
                 <SignInButton />
               </SignedOut>
-              <SignedIn>
-                <UserButton />
-              </SignedIn>
             </div>
 
             <div className="flex ml-4 lg:hidden">

@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import Header from '../components/Header';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { FaRunning, FaHandHoldingHeart, FaComments, FaNewspaper, FaBullhorn } from 'react-icons/fa';
-import { UserButton } from '@clerk/nextjs';
+import Footer from '../components/Footer';
 
 const commonStyles = {
   navCard: "transition-all duration-200 hover:shadow-lg hover:-translate-y-1 cursor-pointer",
@@ -150,6 +150,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

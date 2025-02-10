@@ -7,7 +7,6 @@ import { FiClock, FiHeart, FiShare2, FiBookmark } from 'react-icons/fi';
 const NewsSection = () => {
   const [activeCategory, setActiveCategory] = useState('All');
   
-  // Pre-define static values instead of using random numbers
   const trendingTopics = [
     { name: '#YouthEmpowerment', posts: 856 },
     { name: '#ClimateAction', posts: 743 },
@@ -21,7 +20,7 @@ const NewsSection = () => {
   const FeaturedArticle = () => (
     <div className="relative overflow-hidden rounded-2xl h-[500px] group">
       <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10" />
-      <img
+      <img // Need to use IMG tag here for responsive sizing
         src="/api/placeholder/1200/500"
         alt="Featured Article"
         className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"

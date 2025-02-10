@@ -22,12 +22,14 @@ export default function Home() {
 
   return (
     <>
+    
       <Hero />
       <CTA />
       <Stats />
       <Testimonial />
       <Faqs />
       <Footer />
+
     </>
   );
 }

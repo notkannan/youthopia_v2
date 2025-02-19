@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { FiClock, FiHeart, FiShare2, FiBookmark } from 'react-icons/fi';
+import Header from '../components/Header';
 
 const NewsSection = () => {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -165,8 +166,12 @@ const NewsSection = () => {
   };
 
   return (
+    <>
+    <Header />
     <div className="min-h-screen bg-gray-50 py-8">
+
       <div className="container mx-auto px-4">
+
         {/* Featured Article */}
         <section className="mb-12">
           <FeaturedArticle />
@@ -220,6 +225,7 @@ const NewsSection = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

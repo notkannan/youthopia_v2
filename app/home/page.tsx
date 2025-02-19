@@ -1,12 +1,13 @@
 'use client';
 
-import { useAuth } from '@clerk/nextjs';
-import { useRouter } from 'next/navigation';
+import { useAuth, useUser } from '@clerk/nextjs';
+import { useRouter, redirect } from 'next/navigation';
 import { useEffect } from 'react';
 import Header from '../components/Header';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { FaRunning, FaHandHoldingHeart, FaComments, FaNewspaper, FaBullhorn } from 'react-icons/fa';
 import Footer from '../components/Footer';
+import AgeUpdateForm from '../components/AgeUpdateForm';
 
 const commonStyles = {
   navCard: "transition-all duration-200 hover:shadow-lg hover:-translate-y-1 cursor-pointer",
@@ -93,12 +94,29 @@ const ActivityFeed = () => (
 const Dashboard = () => {
   const { isSignedIn } = useAuth();
   const router = useRouter();
+  const { user, isLoaded } = useUser();
+
 
   useEffect(() => {
     if (!isSignedIn) {
       router.push('/');
     }
   }, [isSignedIn, router]);
+
+  if (!isLoaded) {
+    return <div>Loading...</div>;
+  }
+
+  const userAge = user?.publicMetadata?.age;
+
+  if (!userAge) {
+    return (
+      <div className="p-4">
+        <h1>Welcome! Please set your age to continue</h1>
+        <AgeUpdateForm />
+      </div>
+    );
+  }
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />

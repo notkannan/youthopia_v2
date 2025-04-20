@@ -14,7 +14,7 @@ const initialPosts: Post[] = [
     id: 1,
     title: "What's your favorite programming language?",
     author: "TechEnthusiast",
-    content: "I'm curious to know what programming languages everyone prefers and why. Share your thoughts!",
+    content: "I'm curious to know what programming languages everyone prefers and why. Let me know chat",
     upvotes: 42,
     comments: [
       { id: 1, author: "CodeWizard", content: "Python all the way! It's versatile and easy to read." },
